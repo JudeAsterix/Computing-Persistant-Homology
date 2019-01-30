@@ -13,10 +13,10 @@ import java.net.URL;
 public class Sandbox {
     public static void main(String[] args) throws FileNotFoundException, MalformedURLException {
         ChainComplex oc = new ChainComplex("test.txt");
-        oc.show();
-        System.out.println(oc.showIDs());
-        System.out.println(oc.showMatrices());
-        
+        double[][] mat1 = oc.getFunctionMatrixAtIndex(0);
+        double[][] mat2 = oc.getFunctionMatrixAtIndex(1);
+        double[][] trans1 = MatrixReducer.findColumnEchelonForm(mat2);
+        MatrixReducer.printArray(trans1);
     }
     
 }

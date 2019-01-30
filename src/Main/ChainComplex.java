@@ -244,4 +244,9 @@ public class ChainComplex {
         
         return s;
     }
+    
+    public double[][] getFunctionMatrixAtIndex(int i)
+    {
+        return functionMatrix.get(i);
+    }
 }
